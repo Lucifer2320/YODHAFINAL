@@ -1,245 +1,240 @@
-/* Reset Styles */
+/* ===== Base & Reset ===== */
+:root {
+  --primary-red: #ff0000;
+  --dark-bg: #000;
+  --section-padding: clamp(4rem, 8vw, 10rem);
+  --header-height: 70px;
+  --text-light: #fff;
+  --transition-fast: 0.2s ease;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
 }
 
 body {
-    background: black;
-    color: white;
-    text-align: center;
+  background: var(--dark-bg);
+  color: var(--text-light);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Navigation Bar */
+/* ===== Header & Navigation ===== */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  height: var(--header-height);
 }
 
 .logo {
-    width: 130px;
+  width: clamp(100px, 15vw, 130px);
+  height: auto;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  transition: color var(--transition-fast);
 }
 
-nav ul li a:hover {
-    color: red;
+.nav-link:hover {
+  color: var(--primary-red);
 }
 
-/* Section Padding */
-section {
-    padding: 150px 20px; /* Increased padding for more space */
-    margin-bottom: 50px; /* Added margin to create space between sections */
-}
-
-/* Hero Section */
+/* ===== Hero Section ===== */
 .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url('mma-bg.jpg') no-repeat center center/cover;
-    text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--section-padding) 1.5rem;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+              url('mma-bg.jpg') center/cover;
+  margin-top: var(--header-height);
 }
 
 .hero h2 {
-    font-size: 3rem;
-    animation: slide-in 1s ease-in-out;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1.5rem;
+  animation: slide-in 1s ease;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    opacity: 0;
-    animation: fade-in 2s ease-in-out forwards;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  opacity: 0;
+  animation: fade-in 1s 0.5s forwards;
 }
 
-/* CTA Buttons */
+/* ===== Sections ===== */
+section {
+  padding: var(--section-padding) 1.5rem;
+  scroll-margin-top: calc(var(--header-height) + 20px);
+}
+
+/* ===== CTA Buttons ===== */
 .cta-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 30px;
-    z-index: 100; /* Ensure buttons are above other elements */
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cta-button {
-    background: red;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: transform 0.3s;
-    display: inline-block;
+  background: var(--primary-red);
+  color: var(--text-light);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 
+    transform var(--transition-fast),
+    background-color var(--transition-fast);
+  min-width: 160px;
+  text-align: center;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
 }
 
 .cta-button:hover {
-    transform: scale(1.1);
+  transform: translateY(-3px);
+  background-color: #cc0000;
 }
 
-/* Programs Section */
-.programs {
-    text-align: center;
-}
-
+/* ===== Programs Grid ===== */
 .program-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    max-width: 800px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .program-box {
-    background: red;
-    padding: 15px;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: transform 0.3s;
+  background: var(--primary-red);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform var(--transition-fast);
 }
 
 .program-box:hover {
-    transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
-/* Why Choose Us */
-.why-us {
-    background: #111;
-    padding: 50px 20px;
-}
-
-.why-list {
-    list-style: none;
-    padding: 0;
-}
-
-.why-list li {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.why-list li i {
-    color: red;
-    margin-right: 10px;
-    font-size: 1.5rem;
-}
-
-/* Benefits Section */
-#benefits {
-    scroll-margin-top: 80px; /* Adjust this value based on your header height */
-}
-
+/* ===== Benefits Section ===== */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s;
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform var(--transition-fast);
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
-/* Contact Section */
-.contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+/* ===== Contact Form ===== */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.contact input, .contact textarea {
-    width: 80%;
-    max-width: 400px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+.contact-input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-light);
 }
 
-.contact textarea {
-    height: 100px;
+.contact-input::placeholder {
+  color: rgba(255,255,255,0.7);
 }
 
-.contact button {
-    background: red;
-    padding: 10px 20px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: 0.3s;
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 1rem;
+    display: none; /* Add hamburger menu logic here */
+  }
+  
+  .hero {
+    padding: 6rem 1rem;
+  }
+  
+  .cta-button {
+    width: 100%;
+  }
 }
 
-.contact button:hover {
-    background: darkred;
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 3rem 1rem;
+  }
+  
+  .program-box {
+    padding: 1.5rem;
+  }
 }
 
-/* Footer */
-footer {
-    background: black;
-    padding: 15px;
-    color: white;
-    font-size: 0.9rem;
-}
-
-/* Animations */
+/* ===== Animations ===== */
 @keyframes fade-in {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slide-in {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .program-grid {
-        grid-template-columns: 1fr;
-    }
+/* ===== Utilities ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
 
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
+.text-center {
+  text-align: center;
 }
