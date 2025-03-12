@@ -1,88 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yodha Martial Arts Academy</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yodha Martial Arts Academy</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <img src="./logo.jpg" alt="Yodha Martial Arts Academy" class="logo">
-            <h1>Yodha Martial Arts Academy</h1>
-            <ul>
-                <li><a href="#about">Why Martial Arts?</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <img src="./logo.jpg" alt="Yodha Martial Arts Academy Logo" class="logo" width="120" height="60">
+      <h1>Yodha Martial Arts Academy</h1>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="#about">Why Martial Arts?</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Unleash Your Inner Warrior.<br>Master the Art of Combat</h2>
-        <p>Strength | Confidence | Endurance<br>Train with the best. Transform your body and mind.</p>
-        <div class="buttons">
-            <a href="https://wa.me/919986480301" class="cta-button">WhatsApp Us</a>
-            <a href="#contact" class="cta-button secondary">Join Now</a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <h2 id="hero-heading">Unleash Your Inner Warrior.<br>Master the Art of Combat</h2>
+    <p>Strength | Confidence | Endurance<br>Train with the best. Transform your body and mind.</p>
+    <div class="buttons">
+      <a href="https://wa.me/919986480301" class="cta-button">WhatsApp Us</a>
+      <a href="#contact" class="cta-button secondary">Join Now</a>
+    </div>
+  </section>
 
-    <!-- Programs Section -->
-    <section id="programs" class="programs">
-        <h2>Our Programs</h2>
-        <div class="program-grid">
-            <div class="program-box">Boxing</div>
-            <div class="program-box">Kickboxing</div>
-            <div class="program-box">Muay Thai</div>
-            <div class="program-box">MMA</div>
-            <div class="program-box">Wrestling</div>
-            <div class="program-box">Bodybuilding</div>
-            <div class="program-box">BJJ</div>
-            <div class="program-box">Self-Defense</div>
-        </div>
-    </section>
+  <!-- Programs Section -->
+  <section id="programs" class="programs" aria-labelledby="programs-heading">
+    <h2 id="programs-heading">Our Programs</h2>
+    <div class="program-grid">
+      <div class="program-box">Boxing</div>
+      <div class="program-box">Kickboxing</div>
+      <div class="program-box">Muay Thai</div>
+      <div class="program-box">MMA</div>
+      <div class="program-box">Wrestling</div>
+      <div class="program-box">Bodybuilding</div>
+      <div class="program-box">BJJ</div>
+      <div class="program-box">Self-Defense</div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>Why Martial Arts?</h2>
-        <p>Martial arts isn’t just about fighting—it’s about discipline, confidence, and self-defense. <br> Martial arts is a way of living—a true art.</p>
-    </section>
+  <!-- About Section -->
+  <section id="about" aria-labelledby="about-heading">
+    <h2 id="about-heading">Why Martial Arts?</h2>
+    <p>Martial arts isn’t just about fighting—it’s about discipline, confidence, and self-defense. <br> Martial arts is a way of living—a true art.</p>
+  </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits">
-        <h2>Facilities At Yodha Martial Arts</h2>
-        <div class="grid">
-            <div class="card"><h3>Expert Trainers</h3><p>Learn from professionals with years of experience.</p></div>
-            <div class="card"><h3>All Age Groups</h3><p>Start learning today, no matter your age or fitness level.</p></div>
-            <div class="card"><h3>Multiple Disciplines</h3><p>We teach MMA, Karate, Muay Thai, and Jiu-Jitsu.</p></div>
-            <div class="card"><h3>Fitness & Strength</h3><p>Build strength, endurance, speed, and flexibility.</p></div>
-        </div>
-    </section>
+  <!-- Benefits Section -->
+  <section id="benefits" aria-labelledby="benefits-heading">
+    <h2 id="benefits-heading">Facilities At Yodha Martial Arts</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Expert Trainers</h3>
+        <p>Learn from professionals with years of experience.</p>
+      </div>
+      <div class="card">
+        <h3>All Age Groups</h3>
+        <p>Start learning today, no matter your age or fitness level.</p>
+      </div>
+      <div class="card">
+        <h3>Multiple Disciplines</h3>
+        <p>We teach MMA, Karate, Muay Thai, and Jiu-Jitsu.</p>
+      </div>
+      <div class="card">
+        <h3>Fitness & Strength</h3>
+        <p>Build strength, endurance, speed, and flexibility.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Start Your Journey Today!</h2>
-        <p>Contact YODHA-MMA at: <strong>Rakesh Master - +919986480301</strong></p>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="tel" name="phone" placeholder="Your Phone Number" required>
-            <textarea name="message" placeholder="Comments (if any)" rows="4"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <div class="social-icons">
-            <a href="https://wa.me/+919986480301" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/yodha.mma?igsh=d3p2ajBjZWhzZ3Y1" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Start Your Journey Today!</h2>
+    <p>Contact YODHA-MMA at: <strong>Rakesh Master - +919986480301</strong></p>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+      <input type="tel" name="phone" placeholder="Your Phone Number" required aria-label="Your Phone Number">
+      <textarea name="message" placeholder="Comments (if any)" rows="4" required aria-label="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Yodha Martial Arts Academy. All Rights Reserved.</p>
-    </footer>
+  <!-- Social Media Buttons -->
+  <div class="social-buttons">
+    <a href="https://wa.me/919986480301" class="social-button whatsapp" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.instagram.com/yodha.mma?igsh=d3p2ajBjZWhzZ3Y1" class="social-button instagram" aria-label="Follow on Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Yodha Martial Arts Academy. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
